@@ -183,6 +183,12 @@
 	<img id="cn" src="img/chinese.png">
 	<img id="en" src="img/english.png">
 	<img id="hid" src="img/hidden.png">
+	<img id="A1en" src="img/A1en.png">
+	<img id="A1cn" src="img/A1cn.png">
+	<img id="A2en" src="img/A2en.png">
+	<img id="A2cn" src="img/A2cn.png">
+	<img id="A3en" src="img/A3en.png">
+	<img id="A3cn" src="img/A3cn.png">
 	
 	<audio id="soc01" src="mus/soc01.m4a"></audio>
 	<audio id="soc01cn" src="mus/soc01cn.m4a"></audio>
@@ -275,20 +281,72 @@
 	
 	
 	
-	
-	
+	<!-- 音頻換位置 -->
+	<a-image position="29.8 1.25 20" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #restaurant1; position: 28 -10 22" 
+	event-set__resvis="_event: click; _target: #restaurant2; position: 28 -10 22"
+	event-set__tarpos="_event: click; _target: #A1cn1; position: 28 -10 22"
+	event-set__respos="_event: click; _target: #A1en1; position: 28 -10 22">
+	</a-image>
+	<a-image position="29.8 0.25 20" scale="0.25 0.25 0" id="button1" src="#en" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #restaurant1; position: 28 -10 22" 
+	event-set__resvis="_event: click; _target: #restaurant2; position: 28 -0.5 22"
+	event-set__tarpos="_event: click; _target: #A1cn1; position: 28 -10 22"
+	event-set__respos="_event: click; _target: #A1en1; position: 28 0.7 22">
+	</a-image>
+	<a-image position="29.8 0.75 20" scale="0.25 0.25 0" id="button2" src="#cn" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #restaurant1; position: 28 -0.2 22" 
+	event-set__resvis="_event: click; _target: #restaurant2; position: 28 -10 22"
+	event-set__tarpos="_event: click; _target: #A1cn1; position: 28 0.332 22" 
+	event-set__respos="_event: click; _target: #A1en1; position: 28 -10 22">
+	</a-image>
+	<!-- 語音圖檔 -->
+	<a-image material="src:#A1en" scale="4.5 4.5 4.5" id="A1en1" position="28 -10 22" rotation="0 180 0"></a-image>
+	<a-image material="src:#A1cn" scale="4.5 4.5 4.5" id="A1cn1" position="28 -10 22" rotation="0 180 0"></a-image>
 	<!-- 音效 餐廳 -->
-	<a-entity geometry="primitive: circle; radius: 0.45" material="src:#muicon"  id="restaurant1" position="28 0 22" rotation="0 180 0" sound="src: #soc02">
-		
+	<a-entity id="restaurant1" position="28 -10 22" rotation="0 180 0" sound="src: #soc02">
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play1></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause1></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop1></a-entity>
-		
 	</a-entity>
+	<!-- 音效 餐廳 -->
+	<a-entity id="restaurant2" position="28 -10 22" rotation="0 180 0" sound="src: #soc02">
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play1></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause1></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop1></a-entity>
+	</a-entity>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 音頻換位置 -->
+	<a-image position="26 1.25 66" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #A2c; position: 24 -10 67" 
+	event-set__resvis="_event: click; _target: #A2e; position: 24 -10 67"
+	event-set__tarpos="_event: click; _target: #A2cn1; position: 24 -10 67"
+	event-set__respos="_event: click; _target: #A2en1; position: 24 -10 67">
+	</a-image>
+	<a-image position="26 0.25 66" scale="0.25 0.25 0" id="button1" src="#en" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #A2c; position: 24 -10 67" 
+	event-set__resvis="_event: click; _target: #A2e; position: 24 0 67"
+	event-set__tarpos="_event: click; _target: #A2cn1; position: 24 -10 67"
+	event-set__respos="_event: click; _target: #A2en1; position: 24 -0.2 67">
+	</a-image>
+	<a-image position="26 0.75 66" scale="0.25 0.25 0" id="button2" src="#cn" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #A2c; position: 24 0.5 67" 
+	event-set__resvis="_event: click; _target: #A2e; position: 24 -10 67"
+	event-set__tarpos="_event: click; _target: #A2cn1; position: 24 0 67" 
+	event-set__respos="_event: click; _target: #A2en1; position: 24 -10 67">
+	</a-image>
+	<!-- 語音圖檔 -->
+	<a-image material="src:#A2en" scale="4 4 4" id="A2en1" position="24 -10 67" rotation="0 180 0"></a-image>
+	<a-image material="src:#A2cn" scale="4.5 4.5 4.5" id="A2cn1" position="24 -10 67" rotation="0 180 0"></a-image>
 	<!-- 音效 A2 -->
-	<a-entity geometry="primitive: circle; radius: 0.45" material="src:#muicon"  id="A2" position="24 1 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc03">
+	<a-entity id="A2e" position="24 -10 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc03">
 		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play2></a-entity>
 		
@@ -297,8 +355,53 @@
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop2></a-entity>
 		
 	</a-entity>
+	<a-entity id="A2c" position="24 -10 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc03">
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play2></a-entity>
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause2></a-entity>
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop2></a-entity>
+		
+	</a-entity>
+	
+	
+	
+	
+	<!-- 音頻換位置 -->
+	<a-image position="29.3 1.25 76" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #A3c; position: 27.5 -10 77" 
+	event-set__resvis="_event: click; _target: #A3e; position: 27.5 -10 77"
+	event-set__tarpos="_event: click; _target: #A3cn1; position: 27.5 -10 77"
+	event-set__respos="_event: click; _target: #A3en1; position: 27.5 -10 77">
+	</a-image>
+	<a-image position="29.3 0.25 76" scale="0.25 0.25 0" id="button1" src="#en" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #A3c; position: 27.5 -10 77" 
+	event-set__resvis="_event: click; _target: #A3e; position: 27.5 -0.3 77"
+	event-set__tarpos="_event: click; _target: #A3cn1; position: 27.5 -10 77"
+	event-set__respos="_event: click; _target: #A3en1; position: 27.2 0 77">
+	</a-image>
+	<a-image position="29.3 0.75 76" scale="0.25 0.25 0" id="button2" src="#cn" rotation="0 180 0"
+	event-set__tarvis="_event: click; _target: #A3c; position: 27.5 -0.2 77" 
+	event-set__resvis="_event: click; _target: #A3e; position: 27.5 -10 77"
+	event-set__tarpos="_event: click; _target: #A3cn1; position: 27.2 -0.3 77" 
+	event-set__respos="_event: click; _target: #A3en1; position: 27.5 -10 77">
+	</a-image>
+	<!-- 語音圖檔 -->
+	<a-image material="src:#A3en" scale="4 4 4" id="A3en1" position="27.5 -10 77" rotation="0 180 0"></a-image>
+	<a-image material="src:#A3cn" scale="4.5 4.5 4.5" id="A3cn1" position="27.5 -10 77" rotation="0 180 0"></a-image>
 	<!-- 音效 A3 -->
-	<a-entity geometry="primitive: circle; radius: 0.45" material="src:#muicon"  id="A3m" position="27.5 0.6 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc04">
+	<a-entity id="A3c" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc04">
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play3></a-entity>
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause3></a-entity>
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop3></a-entity>
+		
+	</a-entity>
+	<!-- 音效 A3 -->
+	<a-entity id="A3e" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc04">
 		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play3></a-entity>
 		
@@ -453,7 +556,7 @@
 			<!-- Progressive Controls -->
 			<a-entity progressive-controls>
 				<a-camera>
-					<a-image id="blink" src="#black" cursor="fuse:true; fuseTimeout:1500" position="0 0 -0.3" opacity="0" height="100%" width="100%" raycaster="objects: .clickable>
+					<a-image id="blink" src="#black" cursor="fuse:true; fuseTimeout:1500" position="0 0 -0.3" opacity="0" height="100%" width="100%">
 					</a-image>
 				</a-camera>
 			</a-entity>
