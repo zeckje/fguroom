@@ -63,6 +63,7 @@
 				});
 			}
 		});
+		
 	</script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
@@ -141,6 +142,16 @@
 	
 	<!-- 音效 餐廳 -->
 	<a-entity geometry="primitive: circle; radius: 0.45" material="src:#muicon"  id="restaurant1" position="29 0.75 23" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc02">
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play1></a-entity>
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause1></a-entity>
+		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop1></a-entity>
+		
+	</a-entity>
+	<!-- 音效 A2 -->
+	<a-entity geometry="primitive: circle; radius: 0.45" material="src:#muicon"  id="restaurant1" position="24 0 64" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc02">
 		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play1></a-entity>
 		
