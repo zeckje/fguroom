@@ -92,7 +92,7 @@
 		});
 		AFRAME.registerComponent('play2', {
 			init: function () {
-				var entity = document.querySelector('#A2');
+				var entity = document.querySelector('#restaurant2');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.playSound();
 					console.log('Playback resumed successfully');
@@ -101,7 +101,7 @@
 		});
 		AFRAME.registerComponent('pause2', {
 			init: function () {
-				var entity = document.querySelector('#A2');
+				var entity = document.querySelector('#restaurant2');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.pauseSound();
 					console.log('Playback resumed successfully');
@@ -110,7 +110,7 @@
 		});
 		AFRAME.registerComponent('stop2', {
 			init: function () {
-				var entity = document.querySelector('#A2');
+				var entity = document.querySelector('#restaurant2');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.stopSound();
 					console.log('Playback resumed successfully');
@@ -119,7 +119,7 @@
 		});
 		AFRAME.registerComponent('play3', {
 			init: function () {
-				var entity = document.querySelector('#A3m');
+				var entity = document.querySelector('#A2e');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.playSound();
 					console.log('Playback resumed successfully');
@@ -128,7 +128,7 @@
 		});
 		AFRAME.registerComponent('pause3', {
 			init: function () {
-				var entity = document.querySelector('#A3m');
+				var entity = document.querySelector('#A2e');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.pauseSound();
 					console.log('Playback resumed successfully');
@@ -137,7 +137,88 @@
 		});
 		AFRAME.registerComponent('stop3', {
 			init: function () {
-				var entity = document.querySelector('#A3m');
+				var entity = document.querySelector('#A2e');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.stopSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('play4', {
+			init: function () {
+				var entity = document.querySelector('#A2c');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.playSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('pause4', {
+			init: function () {
+				var entity = document.querySelector('#A2c');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.pauseSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('stop4', {
+			init: function () {
+				var entity = document.querySelector('#A2c');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.stopSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('play5', {
+			init: function () {
+				var entity = document.querySelector('#A3e');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.playSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('pause5', {
+			init: function () {
+				var entity = document.querySelector('#A3e');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.pauseSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('stop5', {
+			init: function () {
+				var entity = document.querySelector('#A3e');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.stopSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+			AFRAME.registerComponent('play6', {
+			init: function () {
+				var entity = document.querySelector('#A3c');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.playSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('pause6', {
+			init: function () {
+				var entity = document.querySelector('#A3c');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.pauseSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('stop6', {
+			init: function () {
+				var entity = document.querySelector('#A3c');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.stopSound();
 					console.log('Playback resumed successfully');
@@ -231,7 +312,7 @@
 	
 	
 	
-	<!-- 音頻換位置 -->
+	<!-- floor音頻換位置 -->
 	<a-image position="1.8 1.25 -3.3" scale="0.25 0.25 0" id="button0" src="#hid"
 	event-set__tarvis="_event: click; _target: #floor0; position: 0.25 -10 -7.5" 
 	event-set__resvis="_event: click; _target: #floor01; position: 0.25 -10 -7.5"
@@ -285,7 +366,7 @@
 	
 	
 	
-	<!-- 音頻換位置 -->
+	<!-- A1音頻換位置 -->
 	<a-image position="29.8 1.25 20" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #restaurant1; position: 28 -10 22" 
 	event-set__resvis="_event: click; _target: #restaurant2; position: 28 -10 22"
@@ -315,9 +396,9 @@
 	</a-entity>
 	<!-- 音效 餐廳 -->
 	<a-entity id="restaurant2" position="28 -10 22" rotation="0 180 0" sound="src: #soc03">
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play1></a-entity>
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause1></a-entity>
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop1></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop2></a-entity>
 	</a-entity>
 	
 	
@@ -327,7 +408,7 @@
 	
 	
 	
-	<!-- 音頻換位置 -->
+	<!-- A2音頻換位置 -->
 	<a-image position="26 1.25 66" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #A2c; position: 24 -10 67" 
 	event-set__resvis="_event: click; _target: #A2e; position: 24 -10 67"
@@ -352,27 +433,27 @@
 	<!-- 音效 A2 -->
 	<a-entity id="A2e" position="24 -10 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc04">
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play3></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause3></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop3></a-entity>
 		
 	</a-entity>
 	<a-entity id="A2c" position="24 -10 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc05">
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play4></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause4></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop2></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop4></a-entity>
 		
 	</a-entity>
 	
 	
 	
 	
-	<!-- 音頻換位置 -->
+	<!-- A3音頻換位置 -->
 	<a-image position="29.3 1.25 76" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #A3c; position: 27.5 -10 77" 
 	event-set__resvis="_event: click; _target: #A3e; position: 27.5 -10 77"
@@ -397,21 +478,21 @@
 	<!-- 音效 A3 -->
 	<a-entity id="A3c" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc06">
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play3></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play5></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause3></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause5></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop3></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop5></a-entity>
 		
 	</a-entity>
 	<!-- 音效 A3 -->
 	<a-entity id="A3e" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc07">
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play3></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play6></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause3></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause6></a-entity>
 		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop3></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop6></a-entity>
 		
 	</a-entity>
 	
