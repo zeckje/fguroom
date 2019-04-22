@@ -231,6 +231,7 @@
 <body>
 <a-scene>
 	<a-assit>
+	<!-- 球形圖 -->
 	<img id="front1" src="img/R0010214.JPG" >
 	<img id="GMD" src="img/R0010215.JPG">
 	<img id="floor1" src="img/R0010216.JPG">
@@ -252,13 +253,13 @@
 	<img id="A3-2" src="img/A3-2.JPG">
 	<img id="footsteps" src="img/footsteps.png">
 	<img id="black" src="img/black.png">
-	
+	<!-- 音效圖 -->
 	<img id="Soc" src="img/Soc.png">
 	<img id="muicon" src="img/muicon.png">
 	<img id="playmu" src="img/play.png">
 	<img id="pausemu" src="img/pause.png">
 	<img id="stopmu" src="img/stop.png">
-	
+	<!-- 文字檔 -->
 	<img id="mufloor" src="img/floor.png">
 	<img id="muflooren" src="img/enfloor.png">
 	<img id="cn" src="img/chinese.png">
@@ -270,7 +271,7 @@
 	<img id="A2cn" src="img/A2cn.png">
 	<img id="A3en" src="img/A3en.png">
 	<img id="A3cn" src="img/A3cn.png">
-	
+	<!-- 音效 -->
 	<audio id="soc01" src="mus/flooren.m4a"></audio>
 	<audio id="soc01cn" src="mus/floorcn.m4a"></audio>
 	<audio id="soc02" src="mus/A1en.m4a"></audio>
@@ -279,7 +280,6 @@
 	<audio id="soc05" src="mus/A2cn.m4a"></audio>
 	<audio id="soc06" src="mus/A3en.m4a"></audio>
 	<audio id="soc07" src="mus/A3cn.m4a"></audio>
-	
 	</a-assit>
 	<!-- 前廊 -->
 	<a-sky radius="10" src="#front1" position="0 0 0" rotation="0 180 0" ></a-sky>
@@ -289,14 +289,12 @@
 	<a-sky radius="10" src="#A1" position="14.1 0 14.1" rotation="0 180 0" ></a-sky>
 	<a-sky radius="5" src="#A1-1" position="28 0 8.5" rotation="0 0 0" ></a-sky>
 	<a-sky radius="5" src="#A1-2" position="28.46 0 18.5" rotation="0 0 0" ></a-sky>
-	
 	<!-- 樓梯 -->
 	<a-sky radius="10" src="#floor1" position="-14.1 0 34.1" rotation="0 0 0" ></a-sky>
 	<a-sky radius="10" src="#floor2" position="14.1 0 34.1" rotation="0 200 0" ></a-sky>
 	<!-- B1、B2 -->
 	<a-sky radius="12" src="#B2" position="-14.1 0 56.1" rotation="0 0 0" ></a-sky>
 	<a-sky radius="10" src="#B1" position="-14.1 0 78.1" rotation="0 0 0" ></a-sky>
-	
 	<!-- A3 -->
 	<a-sky radius="10" src="#A3" position="14.1 0 78.1" rotation="0 0 0" ></a-sky>
 	<a-sky radius="5" src="#A3-2" position="28 0 73" rotation="0 270 0" ></a-sky>
@@ -309,9 +307,6 @@
 	<a-sky radius="4" src="#A2-5" position="24 0 64" rotation="0 0 0" ></a-sky>
 	<!-- 後門 -->
 	<a-sky radius="10" src="#back1" position="0 0 92.1" rotation="0 180 0"></a-sky>
-	
-	
-	
 	<!-- floor音頻換位置 -->
 	<a-image position="1.8 1.25 -3.3" scale="0.25 0.25 0" id="button0" src="#hid"
 	event-set__tarvis="_event: click; _target: #floor0; position: 0.25 -10 -7.5" 
@@ -336,36 +331,16 @@
 	<a-image material="src:#muflooren" scale="7 7 7" id="imgflooren" position="0.25 -10 -7.5"></a-image>
 	<!-- 音效 門口 -->
 	<a-entity id="floor0" position="0.25 -10 -7.5" rotation="0 0 0" sound="src: #soc01cn">
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -2.5 2" play></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -2.5 2"  pause></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -2.5 2"  stop></a-entity>
-		
 	</a-entity>
 	<!-- 音效 門口 -->
 	<a-entity id="floor01" position="0.25 -10 -7.5" rotation="0 0 0" sound="src: #soc01">
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -2.5 2" play01></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -2.5 2"  pause01></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -2.5 2"  stop01></a-entity>
-		
 	</a-entity>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<!-- A1音頻換位置 -->
 	<a-image position="29.8 1.25 20" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #restaurant1; position: 28 -10 22" 
@@ -381,7 +356,7 @@
 	</a-image>
 	<a-image position="29.8 0.75 20" scale="0.25 0.25 0" id="button2" src="#cn" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #restaurant1; position: 28 -10 22" 
-	event-set__resvis="_event: click; _target: #restaurant2; position: 28 -0.2 22"
+	event-set__resvis="_event: click; _target: #restaurant2; position: 28 -0.575 22"
 	event-set__tarpos="_event: click; _target: #A1cn1; position: 28 0.332 22" 
 	event-set__respos="_event: click; _target: #A1en1; position: 28 -10 22">
 	</a-image>
@@ -400,14 +375,6 @@
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause2></a-entity>
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop2></a-entity>
 	</a-entity>
-	
-	
-	
-	
-	
-	
-	
-	
 	<!-- A2音頻換位置 -->
 	<a-image position="26 1.25 66" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #A2c; position: 24 -10 67" 
@@ -432,27 +399,15 @@
 	<a-image material="src:#A2cn" scale="4.5 4.5 4.5" id="A2cn1" position="24 -10 67" rotation="0 180 0"></a-image>
 	<!-- 音效 A2 -->
 	<a-entity id="A2e" position="24 -10 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc04">
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play3></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause3></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop3></a-entity>
-		
 	</a-entity>
 	<a-entity id="A2c" position="24 -10 67" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc05">
-		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play4></a-entity>
-		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause4></a-entity>
-		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop4></a-entity>
-		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play4></a-entity>	
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause4></a-entity>	
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop4></a-entity>	
 	</a-entity>
-	
-	
-	
-	
 	<!-- A3音頻換位置 -->
 	<a-image position="29.3 1.25 76" scale="0.25 0.25 0" id="button0" src="#hid" rotation="0 180 0"
 	event-set__tarvis="_event: click; _target: #A3c; position: 27.5 -10 77" 
@@ -476,30 +431,17 @@
 	<a-image material="src:#A3en" scale="4 4 4" id="A3en1" position="27.5 -10 77" rotation="0 180 0"></a-image>
 	<a-image material="src:#A3cn" scale="4.5 4.5 4.5" id="A3cn1" position="27.5 -10 77" rotation="0 180 0"></a-image>
 	<!-- 音效 A3 -->
-	<a-entity id="A3c" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc06">
-		
+	<a-entity id="A3c" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc06">	
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play5></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause5></a-entity>
-		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop5></a-entity>
-		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop5></a-entity>	
 	</a-entity>
 	<!-- 音效 A3 -->
 	<a-entity id="A3e" position="27.5 -10 77" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #soc07">
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play6></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0"  pause6></a-entity>
-		
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop6></a-entity>
-		
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0"  stop6></a-entity>	
 	</a-entity>
-	
-	
-	
-	
-	
 		<!-- 傳送點 -14.1 0 14.1 雜貨店-->
 		<a-image src="#footsteps" position="-4 -3 8" rotation="90 -30 0" checkpoint="offset: -10.1 3 6.1" look-at="#cam-rig"></a-image>
 		<!-- 14.1 0 14.1 -->
@@ -628,6 +570,7 @@
 		<a-image src="#Soc" position="23.9 0 48.05" rotation="-90 -90 -90" scale="0.61 0.61 1"></a-image>
 		<a-image src="#Soc" position="24 0 56" rotation="-90 -90 -90" scale="0.61 0.61 1"></a-image>
 		<a-image src="#Soc" position="24 0 64" rotation="-90 -90 -90" scale="0.61 0.61 1"></a-image>
+		<!-- 相機 -->
 	<a-entity id="cam-rig"
 			  	  movement-controls="controls: checkpoint"
 				  checkpoint-controls="mode: animate; animateSpeed: 25.0"
@@ -638,7 +581,7 @@
 				  					animation.easing: easeOutQuart"
 				  event-set__end="_target: #blink; _event: navigation-end;
 				  				  animation.to: 0">
-			<!-- Progressive Controls -->
+			<!-- 相機控制 -->
 			<a-entity progressive-controls>
 				<a-camera>
 					<a-image id="blink" src="#black" cursor="fuse:true; fuseTimeout:1500" position="0 0 -0.3" opacity="0" height="100%" width="100%">
