@@ -12,12 +12,10 @@
 		
 		AFRAME.registerComponent('play', {
 			init: function () {
-			let audiosource = document.querySelector('#floor0');
-				
+			let audiosource = document.querySelector('#floor0');	
 			let musicplay = () => {
         audiosource.components.sound.playSound()
         }
-        
         this.el.addEventListener('click', musicplay);
 			}
 		});
