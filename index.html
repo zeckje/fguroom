@@ -1,34 +1,18 @@
+<!DOCTYPE html>
 <html>
-<head>
-<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.0/aframe/build/aframe-ar.js"></script>
-</head>
-<!-- <body> -->
-<!-- <a-scene embedded arjs> -->
-    <!-- <a-marker preset="hiro"> -->
-      <!-- <a-box position='0 0.5 0' material='color: yellow;'> -->
-	  <!-- </a-box> -->
-    <!-- </a-marker> -->
-    <!-- <a-entity camera></a-entity> -->
-  <!-- </a-scene> -->
-<!-- </body> -->
-<!-- </html> -->
-
-<body style='margin : 0px; overflow: hidden;'>
-<!-- 構建一個3d場景 -->
-<a-scene embedded arjs>
-<!-- 設置一個識別圖，這個很重要，AR效果能不能顯示出來全憑這張識別圖是否被識別  -->
-<a-marker preset='custom' type='pattern' url='img/pattern-marker.patt'>
-<!-- load gltf model 加載一個GLTF格式的模型，該模型就是我們想渲染到屏幕上的效果-->
-<a-entity gltf-model="img/123.obj"  scale='0.01 0.01 0.01' rotation="-90 0 0"></a-entity>    
-<!-- a-entity標籤也能渲染一個模型，animation-mixer屬性還可也添加動效，理解具體細節需要參考AFrame.js文檔 -->    
-<!-- <a-entity gltf-model="/static/gltf/scene.gltf" animation-mixer scale="1 1 1" rotation="-120 0 0" position="0 0.5 0"></a-entity> -->    
-<!-- 或者像這樣 渲染一個立方體 -->    
-<!-- <a-box position='0 0.5 0' material='color: black;'></a-box> -->
-</a-marker>
-<!-- add camera 添加一個攝像機，寫法也不同，具體需要看文檔-->
-<!-- <a-entity camera id="my"></a-entity> -->
-<a-camera ar-raycaster raycaster cursor="fuse:false"></a-camera>
-</a-scene>
-</body>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
